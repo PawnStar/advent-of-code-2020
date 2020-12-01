@@ -2,14 +2,14 @@
 
 This repository contains my solutions to the Advent of Code 2020 challenges.
 
-Usage:
+**Usage:**
 ```bash
 ./aoc.js [day] [part] [mode]
 ```
 
 Where day and part are numbers, and mode is either "sample" or "full".
 
-Example:
+**Example:**
 
 ```bash
 ./aoc.js 1 2 full
