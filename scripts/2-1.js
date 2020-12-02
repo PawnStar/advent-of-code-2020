@@ -4,7 +4,5 @@ module.exports = input =>
     const [min, max] = [smin, smax].map(i => parseInt(i, 10))
     const count = (pass.match(new RegExp(letter, 'g')) || []).length
 
-    console.log(min, max, letter, pass, count)
-
     return min <= count && count <= max
   }).length
