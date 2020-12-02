@@ -2,7 +2,7 @@
 const loadFile = require('./utils/loadFile')
 const {writeFileSync} = require('fs')
 
-const argIndex = process.argv.findIndex(arg => arg.match(/\/aoc\.js$/)) + 1
+const argIndex = process.argv.findIndex(arg => arg.match(/aoc\.js$/)) + 1
 
 const day = process.argv[argIndex]
 let part = parseInt(process.argv[argIndex + 1], 10)
@@ -41,7 +41,7 @@ try {
 } catch (err) {
   if(!/^Unable to find file:/.test(err.message))
     throw err
-  
+
   console.log('Unable to read reference solution, writing file . . .')
   writeFileSync(`./solutions/${day}-${part}-${mode}.txt`, result)
   console.log(result)

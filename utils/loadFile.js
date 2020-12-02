@@ -23,7 +23,7 @@ module.exports = (dir, day, part, suffix) => {
     throw new Error(`Not specific enough: ${dir}/, ${day}, ${part}, ${suffix}`)
   if(matches.length < 1)
     throw new Error(`Unable to find file: ${dir}/, ${day}, ${part}, ${suffix}`)
-  
+
   const [match] = matches
   const filePath = path.join(root, dir, match)
   const ext = match.split('.')[1]
