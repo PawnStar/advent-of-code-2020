@@ -40,8 +40,7 @@ module.exports = input => {
     return yr >= 2020 && yr <= 2030
   }).filter(({hgt}) => {
     const h = parseInt(hgt, 10)
-    const _unit = hgt.match('[a-z]*$')
-    const unit = _unit && _unit[0]
+    const unit = hgt.match('[a-z]*$')?.[0]
 
     if(unit === 'cm')
       return h >= 150 && h <= 193
