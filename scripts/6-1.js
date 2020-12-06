@@ -6,10 +6,7 @@ module.exports = input => {
       groupString.split('\n').filter(l => !!l)
     )
 
-  const counts = groups.map(group => {
-    const letters = group.join('').split('').sort().join('').search(new RegExp(`(.)\\${group.length - 1}`))
-    return letters.length
-  })
+  const counts = groups.map(group => group.join('').split('').sort().join('').replace(/(.)\1{1,}/g, r => r.charAt(0)).length )
 
   return counts.reduce((a,b) => (a+b), 0)
 }
