@@ -19,7 +19,7 @@ module.exports = input => {
     }
   })
 
-  const rules = rulesArray.reduce((acc, cur) => ({...acc, [cur.parent]: cur.children}), {})
+  const rules = rulesArray.reduce((acc, cur) => ({...acc, [cur.parent]: cur.children}))
 
   const cache = {}
   const numBags = countChildren(rules, 'shiny gold', cache) - 1
