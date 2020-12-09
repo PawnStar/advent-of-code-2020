@@ -23,7 +23,7 @@ console.log('Reading input')
 const input = loadFile('inputs', day, part, mode)
 
 console.log('Running script')
-const result = '' + loadFile('scripts', day, part, mode)(input)
+const result = '' + loadFile('scripts', day, part, mode)(input, mode)
 
 console.log('Comparing results')
 
